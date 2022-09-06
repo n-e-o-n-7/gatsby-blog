@@ -1,27 +1,13 @@
 import * as React from "react"
 
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-
-const IndexPage = () => {
+export default function IndexPage() {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
+    <main className="p-8">
+      <h1 className="mt-0 mb-8 max-w-lg text-4xl font-bold">
+        Hello world!
       </h1>
     </main>
   )
 }
-
-export default IndexPage
 
 export const Head = () => <title>Home Page</title>
