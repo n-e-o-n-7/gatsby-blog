@@ -10,3 +10,9 @@ public
 
 # Yarn
 yarn-error.log
+
+# env
+.env.development
+
+# test
+test.js
