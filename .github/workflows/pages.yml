@@ -70,6 +70,7 @@ jobs:
         env:
           PREFIX_PATHS: 'true'
           PRISMIC_CUSTOM_TYPES_API_TOKEN: ${{ secrets.PRISMIC_CUSTOM_TYPES_API_TOKEN }}
+          INTEGRATION_TOKEN: ${{ secrets.INTEGRATION_TOKEN }}
         run: ${{ steps.detect-package-manager.outputs.manager }} run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1

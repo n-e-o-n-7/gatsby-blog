@@ -5,11 +5,26 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `blog`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://www.aether.red`
   },
   plugins: [
     'gatsby-plugin-postcss',
     'gatsby-plugin-image',
+    {
+			resolve: "gatsby-transformer-remark",
+			options: {
+        plugins: [],
+			},
+		},
+    {
+      resolve: `gatsby-source-notion-api`,
+      options: {
+        token: process.env.INTEGRATION_TOKEN,
+        databaseId: process.env.DATABASE_ID,
+        propsToFrontmatter: true,
+        lowerTitleLevel: true,
+      },
+    },
     {
       resolve: "gatsby-source-prismic",
       options: {

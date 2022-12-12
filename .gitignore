@@ -14,5 +14,5 @@ yarn-error.log
 # env
 .env.development
 
-# test
-test.js
+# worker
+worker.js
